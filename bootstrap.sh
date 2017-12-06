@@ -40,6 +40,9 @@ apt_update() {
 
 install_etckeeper() {
     set -x
+    git config --global user.email "etckeeper@paulfurley.com"
+    git config --global user.name "Paul"
+
     apt install -y etckeeper
     set +x
 }
