@@ -18,7 +18,7 @@ This was inspired by [Bryan Kennedy's blog post](http://plusbryan.com/my-first-5
 
 ```
 cd $HOME
-git --version || apt install git
+git --version || apt install -y git
 git clone https://github.com/paulfurley/ubuntu-first-five-minutes.git
 cd ubuntu-first-five-minutes
 ./bootstrap.sh
