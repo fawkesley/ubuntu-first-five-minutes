@@ -1,6 +1,6 @@
-# Ubuntu Trsty: First Five Minutes
+# Ubuntu First Five Minutes
 
-This is a simple bootstrapping shell script to run on a fresh Ubuntu 14.04 LTS
+This is a simple bootstrapping shell script to run on a fresh Ubuntu 14.04 / 16.04 LTS
 server machine.
 
 I made it after realising half of the Ansible code I write is actually
@@ -15,6 +15,14 @@ The script configures the machine with slightly-harder defaults, for example:
 This was inspired by [Bryan Kennedy's blog post](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers).
 
 ## Usage
+
+```
+cd $HOME
+git --version || apt install git
+git clone https://github.com/paulfurley/ubuntu-first-five-minutes.git'
+cd ubuntu-first-five-minutes
+./bootstrap.sh
+```
 
 ### Fork this repo, adjust to your needs
 
