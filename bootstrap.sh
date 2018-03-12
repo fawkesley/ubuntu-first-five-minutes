@@ -137,7 +137,7 @@ setup_firewall() {
 }
 
 install_useful_stuff() {
-    PACKAGES="vim-tiny htop tree ack-grep"
+    PACKAGES="vim-tiny htop tree ack-grep psmisc"
     if prompt_yes_no "Install useful tools? (${PACKAGES})"; then
         apt install -y $PACKAGES
     fi
