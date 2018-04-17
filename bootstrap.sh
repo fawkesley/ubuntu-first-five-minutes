@@ -34,6 +34,11 @@ check_root() {
   fi
 }
 
+set_timezone() {
+  ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime
+  dpkg-reconfigure -f noninteractive tzdata
+}
+
 set_locale() {
   LOCALE="en_GB.UTF-8"
   if prompt_yes_no "Set locale to ${LOCALE}?" ; then
@@ -157,6 +162,7 @@ upgrade_packages() {
 
 
 check_root
+set_timezone
 set_locale
 apt_update
 install_etckeeper
