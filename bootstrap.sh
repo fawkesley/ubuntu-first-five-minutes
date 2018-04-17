@@ -34,6 +34,14 @@ check_root() {
   fi
 }
 
+set_locale() {
+  LOCALE="en_GB.UTF-8"
+  if prompt_yes_no "Set locale to ${LOCALE}?" ; then
+    locale-gen ${LOCALE}
+    update-locale
+  fi
+}
+
 apt_update() {
     apt-get update
 }
@@ -149,6 +157,7 @@ upgrade_packages() {
 
 
 check_root
+set_locale
 apt_update
 install_etckeeper
 enable_automatic_upgrades
