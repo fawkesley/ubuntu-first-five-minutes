@@ -139,7 +139,8 @@ lock_down_ssh() {
 setup_firewall() {
   ALLOW_PORTS="22 80 443"
 
-  if prompt_yes_no "Turn on Ubuntu firewall? (allow ports $ALLOW_PORTS)" ; then
+  if prompt_yes_no "Install & activate uncomplicated firewall? (allow ports $ALLOW_PORTS)" ; then
+      apt install -y ufw
       set -x
       ufw allow 22
       ufw allow 80
