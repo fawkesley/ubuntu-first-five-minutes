@@ -151,7 +151,7 @@ setup_firewall() {
 }
 
 install_useful_stuff() {
-    PACKAGES="vim-tiny htop tree ack-grep psmisc tmux monit"
+    PACKAGES="vim-tiny htop tree ack-grep psmisc tmux monit curl"
     if prompt_yes_no "Install useful tools? (${PACKAGES})"; then
         apt install -y $PACKAGES
     fi
