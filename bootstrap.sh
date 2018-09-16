@@ -142,9 +142,9 @@ setup_firewall() {
   if prompt_yes_no "Install & activate uncomplicated firewall? (allow ports $ALLOW_PORTS)" ; then
       apt install -y ufw
       set -x
-      ufw allow 22
-      ufw allow 80
-      ufw allow 443
+      for PORT in $ALLOW_PORTS; do
+        ufw allow $PORT
+      done
       ufw enable
       set +x
   fi
