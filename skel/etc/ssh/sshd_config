@@ -29,16 +29,13 @@
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
-
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
+# Set by https://github.com/paulfurley/ubuntu-first-five-minutes
 PermitRootLogin no
-
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
 
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
+# Set by https://github.com/paulfurley/ubuntu-first-five-minutes
 AllowGroups ssh
 
 #PubkeyAuthentication yes
@@ -55,27 +52,20 @@ AllowGroups ssh
 #HostbasedAuthentication no
 # Change to yes if you don't trust ~/.ssh/known_hosts for
 # HostbasedAuthentication
-#IgnoreUserKnownHosts no
 
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
+# Set by https://github.com/paulfurley/ubuntu-first-five-minutes
 IgnoreUserKnownHosts yes
 
 # Don't read the user's ~/.rhosts and ~/.shosts files
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-#PasswordAuthentication yes
-
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
+# Set by https://github.com/paulfurley/ubuntu-first-five-minutes
 PasswordAuthentication no
-
 #PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with
 # some PAM modules and threads)
-# ChallengeResponseAuthentication yes
-
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
 ChallengeResponseAuthentication no
 
 # Kerberos options
@@ -95,21 +85,16 @@ ChallengeResponseAuthentication no
 # be allowed through the ChallengeResponseAuthentication and
 # PasswordAuthentication.  Depending on your PAM configuration,
 # PAM authentication via ChallengeResponseAuthentication may bypass
-# the setting of "PermitRootLogin without-password".
+# the setting of "PermitRootLogin yes
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
-
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
-UsePAM no
+UsePAM yes
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
 #GatewayPorts no
-
-## Set by https://github.com/paulfurley/ubuntu-first-five-minutes
-X11Forwarding no
-
+X11Forwarding yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
@@ -143,4 +128,3 @@ Subsystem	sftp	/usr/lib/openssh/sftp-server
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server
-
