@@ -5,7 +5,7 @@
 THIS_SCRIPT="$0"
 THIS_DIR="$(dirname $0)"
 
-NORMAL_USER="paulfurley"
+NORMAL_USER="paulf"
 USER_HOME="/home/${NORMAL_USER}"
 
 install_file() {
