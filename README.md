@@ -19,7 +19,7 @@ This was inspired by [Bryan Kennedy's blog post](http://plusbryan.com/my-first-5
 ```
 cd $HOME
 git --version || apt update; apt install -y git
-git clone https://github.com/paulfurley/ubuntu-first-five-minutes.git
+git clone https://github.com/fawkesley/ubuntu-first-five-minutes.git
 cd ubuntu-first-five-minutes
 ./bootstrap.sh
 ```
