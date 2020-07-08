@@ -51,6 +51,12 @@ apt_update() {
     apt-get update
 }
 
+disable_motd_news() {
+  if [ -f "/etc/default/motd-news" ];
+    sed -i 's|ENABLED=1|ENABLED=0|g' /etc/default/motd-news
+  fi
+}
+
 install_etckeeper() {
     set -x
     git config --global user.email "etckeeper@paulfurley.com"
@@ -166,6 +172,7 @@ check_root
 set_timezone
 set_locale
 apt_update
+disable_motd_news
 install_etckeeper
 enable_automatic_upgrades
 install_fail_2_ban
