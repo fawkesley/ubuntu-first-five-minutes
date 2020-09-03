@@ -52,7 +52,7 @@ apt_update() {
 }
 
 disable_motd_news() {
-  if [ -f "/etc/default/motd-news" ];
+  if [ -f "/etc/default/motd-news" ]; then
     sed -i 's|ENABLED=1|ENABLED=0|g' /etc/default/motd-news
   fi
 }
